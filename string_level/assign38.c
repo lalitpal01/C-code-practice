@@ -35,6 +35,18 @@ void checkpalindrom(char str[]){
     }
 }
 
+//short function for palindrome function
+void chekcpalindromeshort(char str[]){
+    int len=strlen(str),i;
+    for(i=0;i<len/2;i++){
+        if(str[i]!=str[len-i-1]){
+            printf("string is not palindrome string ");
+            return;
+        }
+    }
+    printf("string is palindrome!");
+}
+
 int main(){
     char str[50];
     printf("enter a string ");
@@ -42,7 +54,7 @@ int main(){
     if(str[strlen(str)-1]=='\n'){
         str[strlen(str)-1]='\0';
     }
-    checkpalindrom(str);
+    chekcpalindromeshort(str);
     return 0;
 
 }
